@@ -1,0 +1,22 @@
+{
+  "name": "bot_adrianolanches",
+  "version": "1.0.0",
+  "description": "bot for discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leozinbranco/bot_adrianoLanches.git"
+  },
+  "author": "Leonardo B.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leozinbranco/bot_adrianoLanches/issues"
+  },
+  "homepage": "https://github.com/leozinbranco/bot_adrianoLanches#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
