@@ -32,7 +32,7 @@ bot.on('message', msg => {
             break;
 
             case '!meow':
-                const { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
+                var { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
                 msg.channel.send(file);
             break;
         }
