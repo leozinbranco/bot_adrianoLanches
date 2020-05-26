@@ -32,8 +32,13 @@ bot.on('message', msg => {
             break;
 
             case '!meow':
-                var { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
-                msg.channel.send(file);
+                async function wait() {
+                    var { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
+                    return file
+                } 
+                const jpg = wait();
+                
+                msg.channel.send(jpg);
             break;
         }
 
