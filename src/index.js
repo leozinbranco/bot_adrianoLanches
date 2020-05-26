@@ -34,15 +34,15 @@ bot.on('message', msg => {
             case '!meow':
                 async function wait() {
                     var { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
-                    return file
+                    msg.channel.send(file);
+                    msg.channel.send("Gatos foda");
                 } 
-                const jpg = wait();
-                
-                msg.channel.send(jpg);
+                wait();
+                //console.log(jpg);
             break;
         }
 
-       /* if(msg.content === '!cu')
+/* if(msg.content === '!cu')
         {
             /*let channel = msg.guild.channels.get('541323621453529100')
             channel.send(frases[Math.floor(Math.random() * frases.length)]);
