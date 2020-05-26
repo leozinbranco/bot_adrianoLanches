@@ -15,7 +15,7 @@ bot.on('guildMemberAdd', membro => {
 
 
 
-bot.on('message', msg => {
+bot.on('message', async msg => {
 
     try{
         var frases = ['Kauan saiba que todos(@everyone) te odiamos.😆',
@@ -32,13 +32,9 @@ bot.on('message', msg => {
             break;
 
             case '!meow':
-                async function wait() {
-                    var { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
+                    const { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
                     msg.channel.send(file);
                     msg.channel.send("Gatos foda");
-                } 
-                wait();
-                //console.log(jpg);
             break;
         }
 
