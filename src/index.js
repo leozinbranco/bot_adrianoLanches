@@ -1,5 +1,6 @@
 const discord = require('discord.js');
 const bot = new discord.Client();
+const fetch = require('node-fetch');
 //const Math = require('Math');
 
 bot.login("NzE0NTE5MzE3NzM5MjA4Nzk1.XswfOQ.dvAOWVIt_r_LbdmhL3vqyjhyRFA");
@@ -28,6 +29,11 @@ bot.on('message', msg => {
             case '!cu':
                 var frase = frases[Math.floor(Math.random() * frases.length)];
                 msg.reply(frase);
+            break;
+
+            case '!meow':
+                const { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
+                msg.channel.send(file);
             break;
         }
 
