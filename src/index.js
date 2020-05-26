@@ -23,14 +23,22 @@ bot.on('message', msg => {
                 'Meu dono é o cara mais foda desse servidor.',
                 'O @Kauan#7156 já tem 24h consecutivas jogando lol!'];
 
-        if(msg.content === '!cu')
+        switch(msg.content)
+        {
+            case '!cu':
+                var frase = frases[Math.floor(Math.random() * frases.length)];
+                msg.reply(frase);
+            break;
+        }
+
+       /* if(msg.content === '!cu')
         {
             /*let channel = msg.guild.channels.get('541323621453529100')
-            channel.send(frases[Math.floor(Math.random() * frases.length)]);*/
+            channel.send(frases[Math.floor(Math.random() * frases.length)]);
             //msg.channel.send('@everyone' + frases[Math.floor(Math.random() * frases.length)]);
             var frase = frases[Math.floor(Math.random() * frases.length)];
             msg.reply(frase);
-        }
+        } */
     }catch(err)
     {
         console.log(err);
