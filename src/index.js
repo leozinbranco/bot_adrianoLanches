@@ -1,6 +1,7 @@
 const discord = require('discord.js');
 const bot = new discord.Client();
 const fetch = require('node-fetch');
+var port = process.env.PORT || 8080;
 //const Math = require('Math');
 
 bot.login("NzE0NTE5MzE3NzM5MjA4Nzk1.XswfOQ.dvAOWVIt_r_LbdmhL3vqyjhyRFA");
@@ -53,3 +54,8 @@ bot.on('message', async msg => {
     
 
 });
+/*bot.port(port,function() {
+    console.log("app running on port 8080"); });*/
+
+//var server=app.listen();
+
