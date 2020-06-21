@@ -6,8 +6,16 @@ var port = process.env.PORT || 8080;
 
 bot.login("NzE0NTE5MzE3NzM5MjA4Nzk1.Xu6-7g.TaTPZOrvR2E83Luhtb7jR3dTNmk");
 
+
+const PORT = process.env.PORT || 3000;
+const connection = () =>{
+    app.listen(PORT, () => {
+        console.log(`Our app is running on port ${ PORT }`);
+    });
+}  
 bot.once('ready', () => {
     console.log(`Bot online: ${bot.user.tag}`);
+    connection();
 });
 
 bot.on('guildMemberAdd', membro => { 
