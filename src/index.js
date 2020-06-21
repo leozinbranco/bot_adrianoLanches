@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 var port = process.env.PORT || 8080;
 //const Math = require('Math');
 
-bot.login("NzE0NTE5MzE3NzM5MjA4Nzk1.XswfOQ.dvAOWVIt_r_LbdmhL3vqyjhyRFA");
+bot.login("NzE0NTE5MzE3NzM5MjA4Nzk1.Xu6-7g.TaTPZOrvR2E83Luhtb7jR3dTNmk");
 
 bot.once('ready', () => {
     console.log(`Bot online: ${bot.user.tag}`);
