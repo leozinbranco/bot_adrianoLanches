@@ -10,6 +10,7 @@ const data = new Date();
 require('dotenv').config();
 const token = process.env.TOKEN;
 
+
 bot.login(token);
 
 
