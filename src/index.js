@@ -7,7 +7,10 @@ const now = moment();
 //const Math = require('Math');
 const data = new Date();
 
-bot.login("NzE0NTE5MzE3NzM5MjA4Nzk1.Xu6-7g.TaTPZOrvR2E83Luhtb7jR3dTNmk");
+require('dotenv').config();
+const token = process.env.TOKEN;
+
+bot.login(token);
 
 
 bot.once('ready', () => {

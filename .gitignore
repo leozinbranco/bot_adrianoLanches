@@ -1,2 +1,5 @@
 node_modules/
 packagew-lock.json/
+
+.env
+.env.test
