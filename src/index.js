@@ -3,7 +3,7 @@ const bot = new discord.Client();
 const fetch = require('node-fetch');
 var moment = require('moment');
 moment.locale('pt-BR');
-const now = moment("09:30","HH:mm" );
+const now = moment();
 //const Math = require('Math');
 const data = new Date();
 
