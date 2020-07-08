@@ -3,7 +3,7 @@ const bot = new discord.Client();
 const fetch = require('node-fetch');
 var moment = require('moment');
 moment.locale('pt-BR');
-const now = moment();
+const now = moment("09:30","HH:mm" );
 //const Math = require('Math');
 const data = new Date();
 
@@ -17,7 +17,9 @@ bot.login(token);
 bot.once('ready', () => {
     console.log(`Bot online: ${bot.user.tag}`);
     
-    //console.log(now);
+    console.log(now);
+    //const horainicio = moment('1000','hhmm');
+    //const horafim = moment('1010','hhmm');
     //console.log(now.isBetween(horainicio, horafim));
         //console.log(time.isBetween('', ''));
     //console.log(moment('12 19').isBetween('12 00', '12 30', 'minute', '[]'));
@@ -47,7 +49,183 @@ const sextaFim = moment("12:19", "HH:mm");
 const setimaInicio = moment("12:20", "HH:mm");
 const setimaFim = moment("13:10", "HH:mm");
 //console.log(now);
-//console.log(now.isBetween(quartaInicio, quartaFim));
+//console.log(now.isBetween(quintaInicio, quintaFim));
+
+        const Segunda = {
+            primeiraAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+            segundaAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+            terceiraAula(){
+                return " \n3B: aula com a Kátia - Biologia! \n3A: -------------------";
+            },
+
+            intervalo(){
+                return " \nIntervalo  :partying_face: :partying_face: ";
+            },
+
+            quartaAula(){
+                return " \n3B: aula com a Eliana - Ética! \n3A: ------------------- ";
+            },
+            quintaAula(){
+                return " \n3B: ------------------- \n3A: aula com a Kátia - Mentoria de Biologia!";
+            },
+
+            sextaAula(){
+                return " \n3B: aula com o PH - Química \n3A: aula com a Eliana - Ética!";
+            },
+
+            setimaAula(){
+                return " \n3B: aula com o PH - Química \n3A: -------------------";
+            }
+        };
+
+        const Terca = {
+            primeiraAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+            segundaAula(){
+                return " \n3B: ------------------- \n3A: aula com o Anderson - Matemática!";
+            },
+            terceiraAula(){
+                return " \n3B: c \n  3A: aula com (?) - Física!";
+            },
+
+            intervalo(){
+                return " \nIntervalo  :partying_face: :partying_face: ";
+            },
+
+            quartaAula(){
+                return " \n3B: aula com a Kátia - Mentoria de Biologia! \n3A: aula com o Anderson - Matemática! ";
+            },
+            quintaAula(){
+                return " \n3B: aula com o Anderson - Matemática! \n3A: ------------------- ";
+            },
+
+            sextaAula(){
+                return " \n3B: ------------------- \n3A: aula com o Anderson - Matemática! ";
+            },
+
+            setimaAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            }
+        };
+
+        const Quarta = {
+            primeiraAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+            segundaAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+            terceiraAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+
+            intervalo(){
+                return " \nIntervalo  :partying_face: :partying_face: ";
+            },
+
+            quartaAula(){
+                return " \n3B: ------------------- \n3A: aula com o PH - Química! ";
+            },
+            quintaAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+
+            sextaAula(){
+                return " \n3B: ------------------- \n3A: aula com o Anderson - Mentoria de Matemática! ";
+            },
+
+            setimaAula(){
+                return " \n3B: ------------------- \n3A: aula com o Anderson - CDP! ";
+            }
+        };
+
+        const Quinta = {
+            primeiraAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+            segundaAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+            terceiraAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+
+            intervalo(){
+                return " \nIntervalo  :partying_face: :partying_face: ";
+            },
+
+            quartaAula(){
+                return " \n3B: aula com o Beto - Marketing! \n3A: ------------------- ";
+            },
+            quintaAula(){
+                return " \n3B: aula com o Beto - Marketing! \n3A: ------------------- ";
+            },
+
+            sextaAula(){
+                return " \n3B: aula com o Beto - Marketing! \n3A: ------------------- ";
+            },
+
+            setimaAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            }
+        };
+
+        const Sexta = {
+            primeiraAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+            segundaAula(){
+                return " \nNão tem aula em nenhuma das classes agora!";
+            },
+            terceiraAula(){
+                return " \n3B: ------------------- \n3A: aula com a Kátia - Biologia! ";
+            },
+
+            intervalo(){
+                return " \nIntervalo  :partying_face: :partying_face: ";
+            },
+
+            quartaAula(){
+                return " \n3B: aula com (?) - Física \n3A: ------------------- ";
+            },
+            quintaAula(){
+                return " \n3B: aula com o Beto - Marketing! \n3A: aula com (?) - Física! ";
+            },
+
+            sextaAula(){
+                return " \n3B: aula com o Beto - Marketing! \n3A: aula com o PH - Química! ";
+            },
+
+            setimaAula(){
+                return " \n3B: aula com a Kátia - Biologia! \n3A: aula com o PH - Mentoria de Química! ";
+            }
+        };
+
+        const Semana = {
+            1(aula) {
+                return Segunda[aula]();
+            },
+
+            2(aula){
+                return Terca[aula]();
+            },
+
+            3(aula){
+                return Quarta[aula]();
+            },
+
+            4(aula){
+                return Quinta[aula]();
+            },
+            5(aula){
+                return Sexta[aula]();
+            }
+        };
 
 bot.on('message', async msg => {
 
@@ -60,6 +238,7 @@ bot.on('message', async msg => {
         
 
 
+                
 
 
         switch(msg.content)
@@ -88,204 +267,42 @@ bot.on('message', async msg => {
                         msg.reply("Não tem aula em nenhuma das salas esse horário");
                     }
                     else{
-                        switch(data.getDay())
-                        {
-                            case 1: //segunda
-                                    
-                                            if(now.isBetween(primeiraInicio, primeiraFim))
-                                            return msg.reply("Não tem aula em nenhuma das classes agora!");
-                                       
-                                        
-                                            if(now.isBetween(segundaInicio, segundaFim))
-                                            return msg.reply("Não tem aula em nenhuma das classes agora!"); 
-                                     
-                                            if(now.isBetween(terceiraInicio, terceiraFim))
-                                            return msg.reply("3B tem aula de:     História, com o Olavo.");
-                                        
-                                        
-                                            if(now.isBetween(intervaloInicio, intervaloFim))
-                                            return msg.reply("Intervalo  :partying_face: :partying_face: ");
-                                       
-                                            if(now.isBetween(quartaInicio, quartaFim))
-                                            return msg.reply("3A tem aula de: História, com o Olavo.  \n 3B tem aula de: So/Fi, com a Vera");
-                                     
 
-                                            if(now.isBetween(quintaInicio, quintaFim))
-                                            return msg.reply("3A tem aula de: So/Fi, com a Vera.");
-                                        
-            
-                                            if(now.isBetween(sextaInicio, sextaFim))
-                                            return msg.reply("Não tem aula em nenhuma das classes agora!");
-            
-                                            if(now.isBetween(setimaInicio, setimaFim))
-                                            return msg.reply("Não tem aula em nenhuma das classes agora!");
+                        let aula;
 
-                                        return(msg.reply("Não está em horário de aula!"));
-                                            
-                                       
-                                    
-                            break;
+                        if(now.isBetween(primeiraInicio, primeiraFim) || now.isSame(primeiraInicio) || now.isSame(primeiraFim))
+                            aula = "primeiraAula";
+                        
+                        if(now.isBetween(segundaInicio, segundaFim) || now.isSame(segundaInicio) || now.isSame(segundaFim))
+                            aula = "segundaAula";
 
-                            case 2: //terça
-                                
-                                        if(now.isBetween(primeiraInicio, primeiraFim))
-                                        return   msg.reply("3A tem aula de: Português, com a Marina.");
-                                        
-                                        
-                                        if(now.isBetween(segundaInicio, segundaFim))
-                                        return    msg.reply("3A tem aula de: Português(Mentoria), com a Marina."); 
-                                        
-            
-                                        if(now.isBetween(terceiraInicio, terceiraFim))
-                                        return   msg.reply("3A tem aula de: Artes, com o Rafael.");
-                                        
-                                        
-                                        if( now.isBetween(intervaloInicio, intervaloFim))
-                                        return  msg.reply("Intervalo  :partying_face: :partying_face: ");
-                                        
-            
-                                        if(now.isBetween(quartaInicio, quartaFim))
-                                        return   msg.reply("3A tem aula de: Artes, com o Rafael.");
-                                        
-                                        if(now.isBetween(quintaInicio, quintaFim))
-                                        return   msg.reply("3B tem aula de: Artes, com o Rafael.");
-                                        
-            
-                                        if(now.isBetween(sextaInicio, sextaFim))
-                                        return  msg.reply("3A tem aula de: Português, com a Marina.");
-                                        
-            
-                                        if(now.isBetween(setimaInicio, setimaFim))
-                                        return  msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
+                        if(now.isBetween(terceiraInicio, terceiraFim) || now.isSame(terceiraInicio)|| now.isSame(terceiraFim))
+                            aula = "terceiraAula";
 
-                                        return(msg.reply("Não está em horário de aula!"));
-                                    
-                                
-                            break;
+                        if(now.isBetween(intervaloInicio, intervaloFim) || now.isSame(intervaloInicio)|| now.isSame(intervaloFim))
+                            aula = "intervalo";
 
-                            case 3: //quarta
-                                
-                                        if (now.isBetween(primeiraInicio, primeiraFim))
-                                        return  msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
-                                        
-                                        if (now.isBetween(segundaInicio, segundaFim))
-                                        return  msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
-            
-                                        if(now.isBetween(terceiraInicio, terceiraFim))
-                                        return  msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
-                                    
-                                        if (now.isBetween(intervaloInicio, intervaloFim))
-                                        return  msg.reply("Intervalo  :partying_face: :partying_face: ");
-                                       
-            
-                                        if (now.isBetween(quartaInicio, quartaFim))
-                                        return  msg.reply("3A tem aula de: Português, com a Marina.");
-                                        
-                                        if( now.isBetween(quintaInicio, quintaFim))
-                                        return  msg.reply("3A tem aula de: Interação e Comunicação, com a Marina.");
-                                        
-            
-                                        if (now.isBetween(sextaInicio, sextaFim))
-                                        return  msg.reply("3B tem aula de: Português, com a Marina.");
-                                        
-            
-                                        if (now.isBetween(setimaInicio, setimaFim))
-                                        return  msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
+                        if(now.isBetween(quartaInicio, quartaFim) || now.isSame(quartaInicio)|| now.isSame(quartaFim))
+                            aula = "quartaAula";
 
-                                            return(msg.reply("Não está em horário de aula!"));
-                                        
-                                    
-                                
-                            break;
+                        if(now.isBetween(quintaInicio, quintaFim) || now.isSame(quintaInicio) || now.isSame(quintaFim))
+                            aula = "quintaAula";
 
-                            case 4: //quinta
-                                
-                                        if(now.isBetween(primeiraInicio, primeiraFim))
-                                        return  msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
-                                        
-                                        if (now.isBetween(segundaInicio, segundaFim))
-                                        return  msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
-            
-                                        if(now.isBetween(terceiraInicio, terceiraFim))
-                                        return  msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
-                                        
-                                        if (now.isBetween(intervaloInicio, intervaloFim))
-                                        return  msg.reply("Intervalo  :partying_face: :partying_face: ");
-                                        
-            
-                                        if (now.isBetween(quartaInicio, quartaFim))
-                                        return  msg.reply("3B tem aula de: Qualificação. \n 3A tem aula de: História, com o Olavo.");
-                                       
-            
-                                        if( now.isBetween(quintaInicio, quintaFim))
-                                        return  msg.reply("3B tem aula de: Qualificação. \n 3A tem aula de: Geografia, com o Zé.");
-                                        
-            
-                                        if( now.isBetween(sextaInicio, sextaFim))
-                                        return  msg.reply("3B tem aula de: Qualificação. \n 3A tem aula de: Ingles, com a Isabela.");
-                                       
-            
-                                        if (now.isBetween(setimaInicio, setimaFim))
-                                        return  msg.reply("3A tem aula de: Geografia, com o Zé.");
-                                        
-                                        
-                                            return(msg.reply("Não está em horário de aula!"));
-                                        
-                                    
-                                
-                            break;
-                             
-                            
-                            case 5: //sexta
-                                    
-                                        if(now.isBetween(primeiraInicio, primeiraFim))
-                                        return msg.reply("Não tem aula em nenhuma das classes agora!");
-                                     
+                        if(now.isBetween(sextaInicio, sextaFim) || now.isSame(sextaInicio) || now.isSame(sextaFim))
+                            aula = "sextaAula";
 
-                                        if (now.isBetween(segundaInicio, segundaFim))
-                                        return msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
-            
-                                        if (now.isBetween(terceiraInicio, terceiraFim))
-                                        return msg.reply("Não tem aula em nenhuma das classes agora!");
-                                       
-                                        
-                                        if (now.isBetween(intervaloInicio, intervaloFim))
-                                        return msg.reply("Intervalo  :partying_face: :partying_face: ");
-                                        
-                                    
-            
-                                        if(now.isBetween(quartaInicio, quartaFim))
-                                        return msg.reply("3B tem aula de: Qualificação \n 3A tem aula de: Ed. Física, com o Daimier.");
-                                        
-            
-                                        if(now.isBetween(quintaInicio, quintaFim))
-                                        return msg.reply("3B tem aula de: Qualificação. \n 3A tem aula de: História, com o Olavo. ");
-                                        
-                                        
-            
-                                        if(now.isBetween(sextaInicio, sextaFim))
-                                        return msg.reply("3B tem aula de: Qualificação. \n 3A tem aula de: Geografia, com o Zé.");
-                                        
-            
-                                    if(now.isBetween(setimaInicio, setimaFim))
-                                    return  msg.reply("Não tem aula em nenhuma das classes agora!");
-                                        
-                                        
-                                        return(msg.reply("Não está em horário de aula!"));
+                        if(now.isBetween(setimaInicio, setimaFim) || now.isSame(setimaInicio) || now.isSame(setimaFim))
+                            aula = "setimaAula";
 
-                            break;
-
+                        //console.log(Semana[data.getDay()]);
+                        if(aula){
+                            const message = Semana[data.getDay()](aula); //parenteses executa a função.
+                            msg.reply(message); 
+                        }   
+                        else{
+                            msg.reply("Não estamos em horário de aula, animal.");
                         }
-
+                        
                     }
 
                     
@@ -306,6 +323,7 @@ bot.on('message', async msg => {
     }catch(err)
     {
         msg.channel.send("Ocorreu um erro durante a execução! bip bip ");
+        console.log(err);
     }
     
 
